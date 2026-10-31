@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Instrument+Sans:wdth,wght@75..100,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="cassaco-sprite.js"></script>
+<style>body{margin:0;background:var(--paper,#F5F2EA);color:var(--ink,#121212);font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:3px}a:hover{color:var(--s2,#3346FF)}*{box-sizing:border-box}input,textarea,select,button{font:inherit;color:inherit}</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--paper,#F5F2EA);color:var(--ink,#121212)">
+
+<div style="border-bottom:2px solid var(--ink,#121212)">
+  <div style="max-width:1320px;margin:0 auto;padding:12px 40px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase">
+    <a href="Cassaco Design System.dc.html" style="text-decoration:none">← Marca</a>
+    <span style="font-weight:500">Componentes e pacotes</span>
+    <a href="#cmp" style="text-decoration:none">08 Componentes</a>
+    <a href="#pacotes" style="text-decoration:none">09 Pacotes</a>
+    <a href="Cassaco Aplicacoes.dc.html" style="text-decoration:none;margin-left:auto">Aplicações →</a>
+  </div>
+</div>
+
+<main style="max-width:1320px;margin:0 auto;padding:0 40px 120px">
+
+<section id="cmp" data-screen-label="08 Componentes" style="padding-top:56px;display:flex;flex-direction:column;gap:40px">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">08 · Interface</span>
+      <h1 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Componentes</h1>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Interface reta e firme, com contorno de 2 px em tinta. O sticker entra em destaques, badges e no botão especial. Tudo nasce bilíngue.</p>
+  </div>
+
+  <!-- HEADER -->
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Cabeçalho · troque o idioma</span>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;background:#FFFDF8;padding:14px 18px 14px 22px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:10px">
+        <svg viewBox="0 0 100 100" style="width:34px;height:34px"><use href="#cs-mark"></use></svg>
+        <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:34px;line-height:1">cassaco</span>
+      </div>
+      <nav style="display:flex;gap:24px;font-weight:600;font-size:15px;flex-wrap:wrap">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4"><a href="#" style="text-decoration:none">{{ n }}</a></sc-for>
+      </nav>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:12px">
+        <div style="display:flex;border:2px solid var(--ink,#121212);border-radius:999px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500">
+          <button onClick="{{ setPT }}" style="border:0;cursor:pointer;border-radius:999px;padding:6px 10px;background:{{ ptBg }};color:{{ ptFg }}">PT</button>
+          <button onClick="{{ setEN }}" style="border:0;cursor:pointer;border-radius:999px;padding:6px 10px;background:{{ enBg }};color:{{ enFg }}">EN</button>
+        </div>
+        <a href="#" style="text-decoration:none;display:flex;align-items:center;gap:8px;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:999px;padding:12px 18px;font-weight:600;font-size:15px" style-hover="background:var(--s2,#3346FF);color:#fff">{{ cta }}<svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#ic-arrow"></use></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUTTONS -->
+  <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px">
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Botões · passe o mouse</span>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button style="border:2px solid var(--ink,#121212);cursor:pointer;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px;display:flex;align-items:center;gap:8px;transition:transform .15s" style-hover="background:var(--s2,#3346FF);border-color:var(--s2,#3346FF);color:#fff" style-active="transform:scale(.97)">Bora conversar<svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#ic-arrow"></use></svg></button>
+        <button style="border:2px solid var(--ink,#121212);cursor:pointer;background:var(--sig,#D6FF3D);color:#121212;border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px;transition:transform .15s,box-shadow .15s" style-hover="box-shadow:4px 4px 0 var(--ink,#121212);transform:translate(-2px,-2px)" style-active="transform:translate(0,0);box-shadow:none">Ver pacotes</button>
+        <button style="border:2px solid var(--ink,#121212);cursor:pointer;background:transparent;border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px" style-hover="background:var(--ink,#121212);color:var(--paper,#F5F2EA)">Portfólio</button>
+        <button style="border:0;cursor:pointer;background:transparent;padding:14px 4px;font-weight:600;font-size:16px;display:flex;align-items:center;gap:6px;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px" style-hover="color:var(--s2,#3346FF)">Saiba mais<svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#ic-arrow-ur"></use></svg></button>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button style="border:2px solid var(--ink,#121212);cursor:pointer;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px">Pequeno</button>
+        <button style="border:2px solid var(--ink,#121212);cursor:pointer;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px">Médio</button>
+        <button style="border:2px solid var(--ink,#121212);cursor:pointer;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:999px;padding:18px 30px;font-weight:600;font-size:19px">Grande</button>
+        <button disabled="" style="border:2px solid rgba(18,18,18,.25);cursor:not-allowed;background:rgba(18,18,18,.06);color:rgba(18,18,18,.4);border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px">Indisponível</button>
+        <button aria-label="Adicionar" style="border:2px solid var(--ink,#121212);cursor:pointer;background:#FFFDF8;border-radius:999px;width:52px;height:52px;display:flex;align-items:center;justify-content:center" style-hover="background:var(--sig,#D6FF3D)"><svg viewBox="0 0 24 24" style="width:22px;height:22px"><use href="#ic-plus"></use></svg></button>
+      </div>
+      <span style="font-size:13px;line-height:1.45;opacity:.75">Primário em tinta vira Tela no hover. Sinal ganha sombra dura de 4 px. Texto do botão é verbo ou convite curto.</span>
+    </div>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:20px;background:var(--s1,#FF9FC4);color:var(--s1-ink,#121212)">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Botão sticker · só 1 por tela</span>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:20px 0">
+        <button style="cursor:pointer;border:0;background:#fff;padding:7px;border-radius:999px;transform:rotate(-4deg);box-shadow:0 1px 2px rgba(18,15,10,.2),0 6px 14px rgba(18,15,10,.16);transition:transform .2s cubic-bezier(.3,1.6,.5,1),box-shadow .2s" style-hover="transform:rotate(2deg) scale(1.06);box-shadow:0 2px 3px rgba(18,15,10,.16),0 16px 30px rgba(18,15,10,.2)">
+          <span style="display:flex;align-items:center;gap:10px;background:var(--sig,#D6FF3D);color:#121212;border-radius:999px;padding:16px 26px 16px 16px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:30px;line-height:1;text-transform:uppercase"><svg viewBox="0 0 100 100" style="width:36px;height:36px"><use href="#cs-mark"></use></svg>Começar projeto</span>
+        </button>
+      </div>
+      <span style="font-size:13px;line-height:1.45">Hover: gira para +2° com mola e levanta. Usar em CTA final de página e em posts.</span>
+    </div>
+  </div>
+
+  <!-- TAGS + BADGES -->
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Tags de serviço</span>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ families }}" as="f" hint-placeholder-count="7">
+          <span style="display:flex;align-items:center;gap:6px;background:{{ f.bg }};color:{{ f.fg }};border-radius:999px;padding:6px 12px 6px 9px;font-weight:600;font-size:14px"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#{{ f.icon }}"></use></svg>{{ f.pt }}</span>
+        </sc-for>
+      </div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:6px">Filtros · clique</span>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ filters }}" as="c" hint-placeholder-count="5">
+          <button onClick="{{ c.toggle }}" style="cursor:pointer;border:2px solid var(--ink,#121212);background:{{ c.bg }};color:{{ c.fg }};border-radius:999px;padding:7px 14px;font-weight:600;font-size:14px;display:flex;align-items:center;gap:6px">{{ c.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Badges</span>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--ink,#121212);border-radius:6px;padding:4px 8px">Mensal</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:6px;padding:5px 9px">Projeto</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;background:var(--sig,#D6FF3D);color:#121212;border-radius:6px;padding:5px 9px">Novo</span>
+        <span style="display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--ink,#121212);border-radius:999px;padding:4px 10px"><span style="width:8px;height:8px;border-radius:999px;background:#2BB673"></span>Agenda aberta</span>
+        <span style="display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1.5px dashed var(--ink,#121212);border-radius:999px;padding:4px 10px">Em breve</span>
+      </div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:6px">Badges sticker</span>
+      <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;padding:6px 4px">
+        <span style="transform:rotate(-5deg);background:#fff;padding:5px;border-radius:12px;box-shadow:0 1px 2px rgba(18,15,10,.2),0 4px 10px rgba(18,15,10,.14)"><span style="display:block;background:var(--ink,#121212);color:var(--sig,#D6FF3D);border-radius:8px;padding:7px 12px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:20px;line-height:1;text-transform:uppercase">Mais pedido</span></span>
+        <span style="transform:rotate(4deg);background:#fff;padding:5px;border-radius:999px;box-shadow:0 1px 2px rgba(18,15,10,.2),0 4px 10px rgba(18,15,10,.14)"><span style="display:block;background:var(--s2,#3346FF);color:var(--s2-ink,#fff);border-radius:999px;padding:7px 14px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:20px;line-height:1;text-transform:uppercase">Imersivo</span></span>
+        <span style="transform:rotate(-2deg);background:#fff;padding:5px;border-radius:12px;box-shadow:0 1px 2px rgba(18,15,10,.2),0 4px 10px rgba(18,15,10,.14)"><span style="display:block;background:var(--s1,#FF9FC4);color:var(--s1-ink,#121212);border-radius:8px;padding:7px 12px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:20px;line-height:1;text-transform:uppercase">PT / EN</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE CARDS -->
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Cards de serviço · 7 famílias</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="7">
+        <a href="#pacotes" style="text-decoration:none;color:inherit;border:2px solid var(--ink,#121212);border-radius:20px;overflow:hidden;background:#FFFDF8;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-4px);box-shadow:0 14px 0 -6px var(--ink,#121212);color:inherit">
+          <div style="background:{{ s.bg }};color:{{ s.fg }};height:170px;position:relative;display:flex;align-items:flex-end;padding:14px 16px;border-bottom:2px solid var(--ink,#121212)">
+            <span style="display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#{{ s.icon }}"></use></svg>{{ s.pillar }}</span>
+            <svg viewBox="0 0 240 280" style="position:absolute;right:14px;top:14px;width:118px;height:auto;overflow:visible;color:#121212;transform:rotate({{ s.rot }})"><g filter="url(#cs-diecut)"><use href="#{{ s.pose }}" x="0" y="0" width="240" height="280" style="fill:var(--sig,#D6FF3D)"></use></g></svg>
+          </div>
+          <div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:38px;line-height:.9;text-transform:uppercase">{{ s.pt }}</span>
+              <span style="font-size:13px;opacity:.65">{{ s.en }}</span>
+            </div>
+            <p style="margin:0;font-size:15px;line-height:1.45;text-wrap:pretty">{{ s.desc }}</p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px">
+              <sc-for list="{{ s.items }}" as="i" hint-placeholder-count="3"><span style="font-size:12px;font-weight:600;border:1.5px solid var(--ink,#121212);border-radius:999px;padding:3px 9px;white-space:nowrap">{{ i }}</span></sc-for>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px">
+    <div style="background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;min-height:520px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Formulário · contato</span>
+      <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:72px;line-height:.85;text-transform:uppercase">Conta pra gente o que você quer fazer.</span>
+      <span style="font-size:16px;line-height:1.5;max-width:380px;opacity:.85">Resposta em até 1 dia útil, no fuso de quem escreveu. Pode escrever em português ou inglês.</span>
+      <svg viewBox="0 0 240 280" style="position:absolute;right:-10px;bottom:-26px;width:210px;height:auto;overflow:visible;color:#121212;transform:rotate(-6deg)"><g filter="url(#cs-diecut)"><circle cx="120" cy="150" r="100" style="fill:var(--sig,#D6FF3D)"></circle><use href="#cs-pose-laptop" x="0" y="0" width="240" height="280" style="fill:var(--s1,#FF9FC4)"></use></g></svg>
+    </div>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:28px;background:#FFFDF8;display:flex;flex-direction:column;gap:18px">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:40px 0">
+          <svg viewBox="0 0 240 280" style="width:180px;height:auto;overflow:visible;color:#121212;transform:rotate(4deg)"><g filter="url(#cs-diecut)"><circle cx="120" cy="150" r="100" style="fill:var(--s1,#FF9FC4)"></circle><use href="#cs-pose-babies" x="0" y="0" width="240" height="280" style="fill:var(--sig,#D6FF3D)"></use></g></svg>
+          <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:48px;line-height:.9;text-transform:uppercase">Recebido. A gente carrega daqui.</span>
+          <span style="font-size:15px;opacity:.75">Message received. We will get back to you within one business day.</span>
+          <button onClick="{{ reset }}" style="border:2px solid var(--ink,#121212);cursor:pointer;background:transparent;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px">Enviar outra</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px">
+          <label style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">Nome<input placeholder="Como você se chama" style="border:2px solid var(--ink,#121212);border-radius:12px;padding:12px 14px;background:#fff;font-size:16px;outline:none" style-focus="box-shadow:0 0 0 4px var(--sig,#D6FF3D)"></label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">E-mail<input value="maria@" style="border:2px solid #D62F2F;border-radius:12px;padding:12px 14px;background:#fff;font-size:16px;outline:none" style-focus="box-shadow:0 0 0 4px var(--sig,#D6FF3D)"><span style="font-weight:500;font-size:12px;color:#B42323">Faltou o resto do e-mail.</span></label>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-weight:600;font-size:14px">Idioma do projeto</span>
+          <div style="display:flex;gap:0;border:2px solid var(--ink,#121212);border-radius:12px;overflow:hidden;align-self:flex-start">
+            <sc-for list="{{ langOpts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.pick }}" style="border:0;cursor:pointer;padding:10px 16px;font-weight:600;font-size:14px;background:{{ o.bg }};color:{{ o.fg }}">{{ o.label }}</button></sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-weight:600;font-size:14px">O que você precisa?</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ svcChips }}" as="c" hint-placeholder-count="7"><button onClick="{{ c.toggle }}" style="cursor:pointer;border:2px solid var(--ink,#121212);background:{{ c.bg }};color:{{ c.fg }};border-radius:999px;padding:7px 12px;font-weight:600;font-size:13px;display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" style="width:15px;height:15px"><use href="#{{ c.icon }}"></use></svg>{{ c.label }}</button></sc-for>
+          </div>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">Investimento previsto<select style="border:2px solid var(--ink,#121212);border-radius:12px;padding:12px 14px;background:#fff;font-size:16px;outline:none"><option>Ainda não sei</option><option>Até R$ 5 mil</option><option>R$ 5 a 20 mil</option><option>Acima de R$ 20 mil</option></select></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">Mensagem<textarea rows="3" placeholder="Prazo, público, referências. Quanto mais contexto, melhor." style="border:2px solid var(--ink,#121212);border-radius:12px;padding:12px 14px;background:#fff;font-size:16px;outline:none;resize:vertical" style-focus="box-shadow:0 0 0 4px var(--sig,#D6FF3D)"></textarea></label>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer"><span style="width:22px;height:22px;border:2px solid var(--ink,#121212);border-radius:6px;background:var(--sig,#D6FF3D);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#ic-check"></use></svg></span>Quero receber novidades</label>
+          <button onClick="{{ send }}" style="margin-left:auto;border:2px solid var(--ink,#121212);cursor:pointer;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px;display:flex;align-items:center;gap:8px" style-hover="background:var(--s2,#3346FF);border-color:var(--s2,#3346FF);color:#fff">Enviar<svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#ic-arrow"></use></svg></button>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Rodapé</span>
+    <footer style="background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:24px;padding:40px 40px 28px;display:flex;flex-direction:column;gap:36px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:40px;line-height:.95;text-transform:uppercase">Do feed à realidade virtual. Do Ceará pra LA.</span>
+          <a href="#" style="align-self:flex-start;text-decoration:none;display:flex;align-items:center;gap:8px;background:var(--sig,#D6FF3D);color:#121212;border-radius:999px;padding:12px 18px;font-weight:600;font-size:15px">oi@cassaco.studio<svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#ic-arrow-ur"></use></svg></a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6">Serviços</span><a href="#" style="text-decoration:none">Conteúdo e marca</a><a href="#" style="text-decoration:none">Vídeo e foto</a><a href="#" style="text-decoration:none">Sites</a><a href="#" style="text-decoration:none">Imersivo e 3D</a><a href="#" style="text-decoration:none">Educação gamificada</a></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6">Estúdio</span><a href="#" style="text-decoration:none">Sobre</a><a href="#" style="text-decoration:none">Pacotes</a><a href="#" style="text-decoration:none">Portfólio</a><a href="#" style="text-decoration:none;display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#ic-insta"></use></svg>@cassaco</a></div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6">Agora</span>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500">{{ timeCE }}</span><span style="font-size:13px;opacity:.7">Fortaleza, Ceará</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--sig,#D6FF3D)">{{ timeLA }}</span><span style="font-size:13px;opacity:.7">Los Angeles, Califórnia</span></div>
+        </div>
+      </div>
+      <div style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:clamp(120px,22vw,300px);line-height:.72;letter-spacing:-.015em;display:flex;align-items:baseline;margin-bottom:-.04em">cassac<span style="position:relative;display:inline-block">o<svg viewBox="0 0 60 60" style="position:absolute;left:70%;top:38%;width:.46em;height:.46em;overflow:visible;color:var(--sig,#D6FF3D)"><use href="#cs-curl"></use></svg></span></div>
+      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.7;border-top:1px solid rgba(245,242,234,.2);padding-top:18px"><span>© 2026 Cassaco Produtora</span><span>Named after the Brazilian opossum</span><span>PT · EN</span></div>
+    </footer>
+  </div>
+</section>
+
+<!-- 09 PACOTES -->
+<section id="pacotes" data-screen-label="09 Pacotes" style="padding-top:110px;display:flex;flex-direction:column;gap:32px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">09 · 11 pacotes · preços em aprovação</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Pacotes</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+      <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Card de pacote: faixa da família, nome, para quem é, o que entra e preço "a partir de". Valores são placeholders até a aprovação.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ pkgFilters }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.pick }}" style="cursor:pointer;border:2px solid var(--ink,#121212);background:{{ c.bg }};color:{{ c.fg }};border-radius:999px;padding:7px 14px;font-weight:600;font-size:14px">{{ c.label }}</button></sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;align-items:stretch">
+    <sc-for list="{{ packages }}" as="p" hint-placeholder-count="11">
+      <article style="position:relative;border:2px solid var(--ink,#121212);border-radius:20px;background:{{ p.cardBg }};color:{{ p.cardFg }};display:flex;flex-direction:column;overflow:visible">
+        <sc-if value="{{ p.featured }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:62px;right:14px;transform:rotate(5deg);background:#fff;padding:5px;border-radius:12px;box-shadow:0 1px 2px rgba(18,15,10,.2),0 4px 10px rgba(18,15,10,.14);z-index:2"><span style="display:block;background:var(--sig,#D6FF3D);color:#121212;border-radius:8px;padding:6px 11px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:18px;line-height:1;text-transform:uppercase">Mais pedido</span></span>
+        </sc-if>
+        <div style="background:{{ p.bg }};color:{{ p.fg }};border-radius:18px 18px 0 0;padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--ink,#121212)">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#{{ p.icon }}"></use></svg>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase">{{ p.family }}</span>
+          <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid currentColor;border-radius:5px;padding:2px 6px">{{ p.type }}</span>
+        </div>
+        <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:14px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:40px;line-height:.88;text-transform:uppercase">{{ p.name }}</span>
+            <span style="font-size:13px;opacity:.65">{{ p.en }}</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.45;text-wrap:pretty">{{ p.desc }}</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ p.items }}" as="i" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:18px 1fr;gap:8px;font-size:14px;line-height:1.35"><svg viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#ic-check"></use></svg><span>{{ i }}</span></div></sc-for>
+          </div>
+          <div style="margin-top:auto;border-top:2px dashed {{ p.rule }};padding-top:14px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px">
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;opacity:.7">A partir de</span>
+              <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:62%;font-size:34px;line-height:.9">R$ X.XXX<span style="font-size:18px">{{ p.per }}</span></span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;opacity:.7">from US$ X,XXX{{ p.perEN }}</span>
+            </div>
+            <button style="cursor:pointer;border:2px solid {{ p.btnBorder }};background:{{ p.btnBg }};color:{{ p.btnFg }};border-radius:999px;width:46px;height:46px;flex:none;display:flex;align-items:center;justify-content:center" aria-label="Quero este"><svg viewBox="0 0 24 24" style="width:20px;height:20px"><use href="#ic-arrow"></use></svg></button>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;palette&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Noturno&quot;,&quot;Sertão&quot;],&quot;default&quot;:&quot;Noturno&quot;,&quot;tsType&quot;:&quot;'Noturno' | 'Sertão'&quot;,&quot;section&quot;:&quot;Marca&quot;},&quot;tilt&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.25,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Marca&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'PT', filters: ['Todos'], projLang: 'Bilíngue', svc: ['Conteúdo', 'Imersivo'], sent: false, pkg: 'Todos', now: Date.now() };
+  applyTheme() {
+    const P = {
+      'Noturno': { '--paper': '#F5F2EA', '--ink': '#121212', '--sig': '#D6FF3D', '--s1': '#FF9FC4', '--s2': '#3346FF', '--s1-ink': '#121212', '--s2-ink': '#FFFFFF' },
+      'Sertão': { '--paper': '#F4ECDF', '--ink': '#1D1813', '--sig': '#E5531F', '--s1': '#3F7A55', '--s2': '#9CCBEF', '--s1-ink': '#F4ECDF', '--s2-ink': '#1D1813' }
+    };
+    const p = P[this.props.palette] || P['Noturno'];
+    Object.keys(p).forEach(k => document.documentElement.style.setProperty(k, p[k]));
+  }
+  componentDidMount() { this.applyTheme(); this.t = setInterval(() => this.setState({ now: Date.now() }), 20000); }
+  componentDidUpdate() { this.applyTheme(); }
+  componentWillUnmount() { clearInterval(this.t); }
+  renderVals() {
+    const st = this.state;
+    const INK = 'var(--ink,#121212)', PAPER = 'var(--paper,#F5F2EA)', S1 = 'var(--s1,#FF9FC4)', S2 = 'var(--s2,#3346FF)', SIG = 'var(--sig,#D6FF3D)';
+    const S1I = 'var(--s1-ink,#121212)', S2I = 'var(--s2-ink,#fff)';
+    const fam = {
+      'Conteúdo': { icon: 'ic-conteudo', bg: S1, fg: S1I, en: 'Content & social', pose: 'cs-pose-phone' },
+      'Marca': { icon: 'ic-marca', bg: S1, fg: S1I, en: 'Branding', pose: 'cs-pose-brush' },
+      'Audiovisual': { icon: 'ic-audiovisual', bg: S1, fg: S1I, en: 'Video & photo', pose: 'cs-pose-camera' },
+      'Sites': { icon: 'ic-sites', bg: S1, fg: S1I, en: 'Websites', pose: 'cs-pose-laptop' },
+      'Imersivo': { icon: 'ic-imersivo', bg: S2, fg: S2I, en: 'VR · AR · 360°', pose: 'cs-pose-vr' },
+      '3D': { icon: 'ic-3d', bg: S2, fg: S2I, en: '3D modeling & capture', pose: 'cs-pose-cube' },
+      'Educação': { icon: 'ic-edu', bg: S2, fg: S2I, en: 'Gamified learning', pose: 'cs-pose-trophy' }
+    };
+    const famList = Object.keys(fam).map(k => ({ pt: k, ...fam[k] }));
+    const toggleIn = (key, v) => () => this.setState(s => ({ [key]: s[key].includes(v) ? s[key].filter(x => x !== v) : [...s[key], v] }));
+    const fmt = tz => new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: tz }).format(new Date(st.now));
+    const svcDesc = {
+      'Conteúdo': ['Social media com cara de gente, não de banco de imagem.', ['Calendário', 'Posts e reels', 'Bilíngue']],
+      'Marca': ['Identidade que aguenta o feed, a fachada e o pitch em inglês.', ['Naming', 'Logo', 'Manual']],
+      'Audiovisual': ['Vídeo e foto pensados para a tela onde vão passar.', ['Roteiro', 'Captação', 'Edição']],
+      'Sites': ['Sites rápidos, bonitos e nas duas línguas desde o primeiro dia.', ['Design', 'Dev', 'SEO']],
+      'Imersivo': ['VR, AR e 360° que funcionam no celular do seu público.', ['VR', 'AR', '360°']],
+      '3D': ['Modelagem e captura em Gaussian Splat de espaços e objetos.', ['Splat', 'Modelagem', 'Web 3D']],
+      'Educação': ['Aulas e oficinas com mecânica de jogo e objetivo de aprendizagem.', ['Aulas', 'Oficinas', 'Jogos']]
+    };
+    const rots = [-4, 3, -2, 5, -5, 2, -3];
+    const pk = [
+      { name: 'Presença Essencial', en: 'Essential Presence', f: 'Conteúdo', type: 'Mensal', per: '/mês', perEN: '/mo', desc: 'Para quem precisa aparecer com constância, sem virar refém do feed.', items: ['12 posts por mês, feed e carrossel', '8 stories', 'Calendário editorial mensal', 'Legendas em PT ou EN'] },
+      { name: 'Presença Pro', en: 'Pro Presence', f: 'Conteúdo', type: 'Mensal', per: '/mês', perEN: '/mo', featured: true, desc: 'Conteúdo com captação própria e estratégia nas duas línguas.', items: ['16 posts e 4 reels por mês', 'Stories toda semana', 'Meia diária de captação mensal', 'Relatório e reunião mensal'] },
+      { name: 'Marca do Zero', en: 'Brand from Scratch', f: 'Marca', type: 'Projeto', per: '', perEN: '', desc: 'Do posicionamento ao kit de templates, pronta para Brasil e EUA.', items: ['Pesquisa e posicionamento', 'Logo e sistema visual', 'Manual de marca', 'Templates para redes'] },
+      { name: 'Vídeo Institucional', en: 'Brand Film', f: 'Audiovisual', type: 'Projeto', per: '', perEN: '', desc: 'Um filme que as pessoas assistem até o fim, mais cortes para redes.', items: ['Roteiro e pré-produção', '1 diária de captação', 'Filme de 2 a 3 min', '3 cortes verticais com legenda PT/EN'] },
+      { name: 'Site', en: 'Website', f: 'Sites', type: 'Projeto', per: '', perEN: '', desc: 'Site institucional bilíngue, rápido e fácil de atualizar.', items: ['Até 5 páginas', 'Design e desenvolvimento', 'PT e EN desde o início', 'SEO básico e 30 dias de suporte'] },
+      { name: 'Captura em Gaussian Splat', en: 'Gaussian Splat Capture', f: '3D', type: 'Projeto', per: '', perEN: '', desc: 'Espaços e objetos em 3D fotorrealista, navegáveis no navegador.', items: ['Captura no local', 'Processamento e limpeza', 'Visualizador web', 'Arquivo pronto para VR'] },
+      { name: 'Tour 360°', en: '360° Tour', f: 'Imersivo', type: 'Projeto', per: '', perEN: '', desc: 'Visita virtual para museus, escolas, eventos e espaços.', items: ['Captação 360° dos ambientes', 'Pontos clicáveis com conteúdo', 'Hospedagem por 12 meses', 'Celular, desktop e óculos VR'] },
+      { name: 'AR no Navegador', en: 'Web AR', f: 'Imersivo', type: 'Projeto', per: '', perEN: '', desc: 'Realidade aumentada sem app: aponta a câmera e pronto.', items: ['Abre por QR code', '1 modelo ou experiência', 'iOS e Android', 'Métricas de acesso'] },
+      { name: 'VR Piloto', en: 'VR Pilot', f: 'Imersivo', type: 'Projeto', per: '', perEN: '', desc: 'Prova de conceito em realidade virtual para testar antes de escalar.', items: ['4 a 6 semanas', '1 cena interativa', 'Teste com usuários', 'Build para Meta Quest'] },
+      { name: 'Aula Gamificada', en: 'Gamified Lesson', f: 'Educação', type: 'Projeto', per: '', perEN: '', desc: 'Conteúdo pedagógico com fases, pontos e desafios.', items: ['Roteiro pedagógico', 'Mecânicas de jogo', 'Versão web ou presencial', 'Guia para quem ensina'] },
+      { name: 'Oficina / Workshop', en: 'Workshop', f: 'Educação', type: 'Por turma', per: '/turma', perEN: '/group', desc: 'Formação prática em conteúdo, 3D, VR ou IA criativa.', items: ['Presencial ou online', 'Até 30 pessoas', 'Material de apoio', 'Certificado PT/EN'] }
+    ];
+    const groups = { 'Todos': null, 'Mensais': p => p.type === 'Mensal', 'Comunicação': p => ['Conteúdo', 'Marca', 'Audiovisual', 'Sites'].includes(p.f), 'Imersivo e 3D': p => ['Imersivo', '3D'].includes(p.f), 'Educação': p => p.f === 'Educação' };
+    const gf = groups[st.pkg];
+    const nav = st.lang === 'PT' ? ['Serviços', 'Imersivo', 'Pacotes', 'Sobre'] : ['Services', 'Immersive', 'Packages', 'About'];
+    return {
+      nav,
+      cta: st.lang === 'PT' ? 'Bora conversar' : "Let's talk",
+      setPT: () => this.setState({ lang: 'PT' }), setEN: () => this.setState({ lang: 'EN' }),
+      ptBg: st.lang === 'PT' ? INK : 'transparent', ptFg: st.lang === 'PT' ? PAPER : INK,
+      enBg: st.lang === 'EN' ? INK : 'transparent', enFg: st.lang === 'EN' ? PAPER : INK,
+      families: famList,
+      filters: ['Todos', 'Brasil', 'EUA', 'Remoto', 'Presencial'].map(l => { const on = st.filters.includes(l); return { label: on ? '✓ ' + l : l, bg: on ? INK : 'transparent', fg: on ? PAPER : INK, toggle: toggleIn('filters', l) }; }),
+      services: famList.map((f, i) => ({ ...f, pillar: i < 4 ? 'Comunicação' : 'Imersivo e 3D', desc: svcDesc[f.pt][0], items: svcDesc[f.pt][1], rot: (rots[i] * (this.props.tilt ?? 1)) + 'deg' })),
+      langOpts: ['Português', 'English', 'Bilíngue'].map(l => ({ label: l, bg: st.projLang === l ? INK : '#fff', fg: st.projLang === l ? PAPER : INK, pick: () => this.setState({ projLang: l }) })),
+      svcChips: famList.map(f => { const on = st.svc.includes(f.pt); return { label: f.pt, icon: f.icon, bg: on ? f.bg : '#fff', fg: on ? f.fg : INK, toggle: toggleIn('svc', f.pt) }; }),
+      sent: st.sent, notSent: !st.sent,
+      send: () => this.setState({ sent: true }), reset: () => this.setState({ sent: false }),
+      timeCE: fmt('America/Fortaleza'), timeLA: fmt('America/Los_Angeles'),
+      pkgFilters: Object.keys(groups).map(l => ({ label: l, bg: st.pkg === l ? INK : 'transparent', fg: st.pkg === l ? PAPER : INK, pick: () => this.setState({ pkg: l }) })),
+      packages: pk.filter(p => !gf || gf(p)).map(p => {
+        const f = fam[p.f];
+        const dark = !!p.featured;
+        return { ...p, family: p.f, icon: f.icon, bg: f.bg, fg: f.fg, featured: dark,
+          cardBg: dark ? INK : '#FFFDF8', cardFg: dark ? PAPER : INK, rule: dark ? 'rgba(245,242,234,.3)' : 'rgba(18,18,18,.25)',
+          btnBg: dark ? SIG : INK, btnFg: dark ? '#121212' : PAPER, btnBorder: dark ? SIG : INK };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

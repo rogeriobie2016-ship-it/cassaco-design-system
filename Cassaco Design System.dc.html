@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Instrument+Sans:wdth,wght@75..100,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="cassaco-sprite.js"></script>
+<style>body{margin:0;background:var(--paper,#F5F2EA);color:var(--ink,#121212);font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:3px}a:hover{color:var(--s2,#3346FF)}*{box-sizing:border-box}</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--paper,#F5F2EA);color:var(--ink,#121212);font-family:'Instrument Sans',sans-serif">
+
+<header style="position:sticky;top:0;z-index:20;background:var(--paper,#F5F2EA);border-bottom:2px solid var(--ink,#121212)">
+  <div style="max-width:1320px;margin:0 auto;padding:12px 40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <svg viewBox="0 0 100 100" style="width:30px;height:30px"><use href="#cs-mark"></use></svg>
+      <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:30px;line-height:1">cassaco</span>
+    </a>
+    <nav style="display:flex;gap:18px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase">
+      <a href="#naming" style="text-decoration:none">01 Naming</a>
+      <a href="#logos" style="text-decoration:none">02 Logos</a>
+      <a href="#paleta" style="text-decoration:none">03 Paleta</a>
+      <a href="#tipo" style="text-decoration:none">04 Tipografia</a>
+      <a href="#tokens" style="text-decoration:none">05 Tokens</a>
+      <a href="#mascote" style="text-decoration:none">06 Mascote</a>
+      <a href="#icones" style="text-decoration:none">07 Ícones</a>
+    </nav>
+    <div style="margin-left:auto;display:flex;gap:8px">
+      <a href="Cassaco Componentes.dc.html" style="text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border:2px solid var(--ink,#121212);border-radius:999px">Componentes</a>
+      <a href="Cassaco Aplicacoes.dc.html" style="text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border:2px solid var(--ink,#121212);border-radius:999px;background:var(--ink,#121212);color:var(--paper,#F5F2EA)">Aplicações</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" style="max-width:1320px;margin:0 auto;padding:0 40px 120px">
+
+<!-- CAPA -->
+<section data-screen-label="00 Capa" style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding:72px 0 88px;min-height:640px">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">
+      <span style="padding:6px 10px;border:1.5px solid var(--ink,#121212);border-radius:999px;white-space:nowrap">Design System v0.1</span>
+      <span style="padding:6px 10px;border:1.5px solid var(--ink,#121212);border-radius:999px;white-space:nowrap">Outubro 2026</span>
+      <span style="padding:6px 10px;border-radius:999px;background:var(--ink,#121212);color:var(--paper,#F5F2EA)">PT / EN</span>
+    </div>
+    <div style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:clamp(120px,17vw,250px);line-height:.78;letter-spacing:-.015em;display:flex;align-items:baseline">cassac<span style="position:relative;display:inline-block">o<svg viewBox="0 0 60 60" style="position:absolute;left:70%;top:38%;width:.46em;height:.46em;overflow:visible;color:var(--ink,#121212)"><use href="#cs-curl"></use></svg></span></div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:62%;font-size:44px;line-height:1;text-transform:uppercase">A gente carrega seu projeto.</div>
+      <div style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:62%;font-size:44px;line-height:1;text-transform:uppercase;color:var(--s2,#3346FF)">We carry your project.</div>
+    </div>
+    <p style="margin:0;max-width:520px;font-size:18px;line-height:1.5;text-wrap:pretty">Produtora multimídia entre o Ceará e Los Angeles. Conteúdo, marca, vídeo, sites e mídias imersivas, em português e inglês. Este documento reúne naming, logos, paleta, tipografia, tokens, mascote e ícones.</p>
+  </div>
+  <div style="position:relative;aspect-ratio:1/1;max-width:560px;width:100%;justify-self:end">
+    <svg viewBox="0 0 240 280" style="position:absolute;inset:4% 6% 0 6%;width:88%;height:auto;overflow:visible;color:#121212;transform:rotate(-4deg)"><g filter="url(#cs-diecut)"><circle cx="120" cy="150" r="100" style="fill:var(--sig,#D6FF3D)"></circle><use href="#cs-pose-babies" x="0" y="0" width="240" height="280" style="fill:var(--s1,#FF9FC4)"></use></g></svg>
+    <svg viewBox="0 0 200 200" style="position:absolute;right:-2%;bottom:2%;width:34%;height:auto;overflow:visible;color:var(--paper,#F5F2EA);transform:rotate(9deg)"><g filter="url(#cs-diecut-sm)"><circle cx="100" cy="100" r="96" style="fill:var(--s2,#3346FF)"></circle><circle cx="100" cy="100" r="60" style="fill:none;stroke:currentColor;stroke-width:2.5"></circle><text style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:70%;font-size:17px;letter-spacing:1px;fill:currentColor"><textPath href="#cs-seal-path" textLength="468">DO CEARÁ PRA LA ✦ FROM CEARÁ TO LA ✦</textPath></text><text x="100" y="94" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:34px;text-anchor:middle;fill:currentColor">CE</text><text x="100" y="128" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:34px;text-anchor:middle;fill:currentColor">LA</text><path d="M84 102 H116 M110 97 L116 102 L110 107" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+    <div style="position:absolute;left:0;bottom:10%;transform:rotate(-7deg);background:#fff;padding:6px;border-radius:12px;box-shadow:0 6px 16px rgba(18,15,10,.18)"><div style="background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:7px;padding:10px 16px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:26px;text-transform:uppercase;line-height:1">Bilíngue PT/EN</div></div>
+  </div>
+</section>
+
+<!-- 01 NAMING -->
+<section id="naming" data-screen-label="01 Naming" style="padding-top:24px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">01 · Em validação</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Naming</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">"Cassaco" é o nome nordestino do gambá, o opossum. A marca vai viver no Brasil e nos EUA, então comparamos cinco caminhos com o mesmo símbolo aplicado: como cada um se lê, se fala e se defende nos dois mercados.</p>
+  </div>
+
+  <div style="overflow-x:auto;margin:0 -40px;padding:0 40px 8px">
+    <div style="min-width:1180px;display:grid;grid-template-columns:132px repeat(5,minmax(0,1fr));border:2px solid var(--ink,#121212);border-radius:16px;overflow:hidden;background:#FFFDF8">
+      <div style="padding:16px;border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:flex-end">Logo aplicado</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:22px 16px 18px;border-right:1.5px solid rgba(18,18,18,.15);display:flex;flex-direction:column;gap:14px;position:relative">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em">0{{ n.num }}</span>
+          <div style="display:flex;align-items:center;gap:8px;min-height:64px">
+            <svg viewBox="0 0 100 100" style="width:40px;height:40px;flex:none"><use href="#cs-mark"></use></svg>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:44px;line-height:.82">{{ n.name }}</span>
+              <span style="font-family:'Anybody',sans-serif;font-weight:700;font-stretch:80%;font-size:13px;letter-spacing:.22em;text-transform:uppercase">{{ n.suffix }}</span>
+            </div>
+          </div>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--sig,#D6FF3D);color:#121212;align-self:flex-start;padding:3px 8px;border-radius:999px">/{{ n.phon }}/</span>
+        </div>
+      </sc-for>
+
+      <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Ideia</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-size:14px;line-height:1.45;text-wrap:pretty">{{ n.idea }}</div>
+      </sc-for>
+
+      <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--s2,#3346FF);color:var(--s2-ink,#fff)">Como soa nos EUA</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-size:14px;line-height:1.45;font-style:italic;text-wrap:pretty">{{ n.us }}</div>
+      </sc-for>
+
+      <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Prós · PT</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.4">
+          <sc-for list="{{ n.prosPT }}" as="t" hint-placeholder-count="2"><div style="display:grid;grid-template-columns:16px 1fr;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-weight:500">+</span><span>{{ t }}</span></div></sc-for>
+        </div>
+      </sc-for>
+
+      <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Contras · PT</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.4">
+          <sc-for list="{{ n.consPT }}" as="t" hint-placeholder-count="2"><div style="display:grid;grid-template-columns:16px 1fr;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-weight:500">−</span><span>{{ t }}</span></div></sc-for>
+        </div>
+      </sc-for>
+
+      <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Pros · EN</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.4">
+          <sc-for list="{{ n.prosEN }}" as="t" hint-placeholder-count="2"><div style="display:grid;grid-template-columns:16px 1fr;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-weight:500">+</span><span>{{ t }}</span></div></sc-for>
+        </div>
+      </sc-for>
+
+      <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Cons · EN</div>
+      <sc-for list="{{ names }}" as="n" hint-placeholder-count="5">
+        <div style="padding:16px;border-top:1.5px solid rgba(18,18,18,.15);border-right:1.5px solid rgba(18,18,18,.15);display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.4">
+          <sc-for list="{{ n.consEN }}" as="t" hint-placeholder-count="2"><div style="display:grid;grid-template-columns:16px 1fr;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-weight:500">−</span><span>{{ t }}</span></div></sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:20px;padding:24px 28px">
+    <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:28px;text-transform:uppercase;background:var(--sig,#D6FF3D);color:#121212;padding:8px 14px;border-radius:10px;transform:rotate(-3deg)">Nossa leitura</span>
+    <p style="margin:0;font-size:17px;line-height:1.5;text-wrap:pretty"><strong>Cassaco Studio</strong> como marca nos dois mercados, com "named after the Brazilian opossum" como linha de apoio nos EUA. <strong>Lab</strong> vira submarca da frente imersiva quando houver volume. Timbu e Marsu ficam de reserva caso a busca de marca do Cassaco trave.</p>
+  </div>
+</section>
+
+<!-- 02 LOGOS -->
+<section id="logos" data-screen-label="02 Logos" style="padding-top:96px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">02 · Quatro caminhos</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Logos</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Cada caminho em fundo claro, fundo escuro e como sticker. Todos funcionam em uma cor; a cor de sinal entra como detalhe, nunca como muleta.</p>
+  </div>
+
+  <!-- path 1 -->
+  <div style="display:grid;grid-template-columns:220px repeat(3,minmax(0,1fr));gap:16px">
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:6px">
+      <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:56px;line-height:.8">1</span>
+      <span style="font-weight:700;font-size:18px">Wordmark</span>
+      <span style="font-size:14px;line-height:1.45;opacity:.75">Display condensada em caixa baixa. O rabo enrolado sai do último "o" e é o único ornamento.</span>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#FFFDF8;border:1.5px solid rgba(18,18,18,.15);display:flex;align-items:center;justify-content:center;color:#121212">
+      <div style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:24cqw;line-height:.78;display:flex;align-items:baseline;transform:translateX(-3cqw)">cassac<span style="position:relative;display:inline-block">o<svg viewBox="0 0 60 60" style="position:absolute;left:70%;top:38%;width:.46em;height:.46em;overflow:visible"><use href="#cs-curl"></use></svg></span></div>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#121212;display:flex;align-items:center;justify-content:center;color:#F5F2EA">
+      <div style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:24cqw;line-height:.78;display:flex;align-items:baseline;transform:translateX(-3cqw)">cassac<span style="position:relative;display:inline-block">o<svg viewBox="0 0 60 60" style="position:absolute;left:70%;top:38%;width:.46em;height:.46em;overflow:visible;color:var(--sig,#D6FF3D)"><use href="#cs-curl"></use></svg></span></div>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:var(--s2,#3346FF);display:flex;align-items:center;justify-content:center">
+      <div style="transform:rotate(-4deg);background:#fff;padding:9px;border-radius:22px;box-shadow:0 8px 18px rgba(18,15,10,.25),0 1px 2px rgba(18,15,10,.2)">
+        <div style="background:var(--sig,#D6FF3D);color:#121212;border-radius:14px;padding:.22em .52em .3em .34em;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:17cqw;line-height:.78;display:flex;align-items:baseline">cassac<span style="position:relative;display:inline-block">o<svg viewBox="0 0 60 60" style="position:absolute;left:70%;top:38%;width:.46em;height:.46em;overflow:visible"><use href="#cs-curl"></use></svg></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- path 2 -->
+  <div style="display:grid;grid-template-columns:220px repeat(3,minmax(0,1fr));gap:16px">
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:6px">
+      <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:56px;line-height:.8">2</span>
+      <span style="font-weight:700;font-size:18px">Símbolo + wordmark</span>
+      <span style="font-size:14px;line-height:1.45;opacity:.75">Cabeça reduzida a círculos e um escudo: orelhas, listra na testa, olhos e focinho.</span>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#FFFDF8;border:1.5px solid rgba(18,18,18,.15);display:flex;align-items:center;justify-content:center;gap:3cqw;color:#121212">
+      <svg viewBox="0 0 100 100" style="width:21cqw;height:21cqw"><use href="#cs-mark"></use></svg>
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:18cqw;line-height:.8">cassaco</span><span style="font-family:'Anybody',sans-serif;font-weight:700;font-stretch:80%;font-size:3.4cqw;letter-spacing:.3em;text-transform:uppercase">produtora</span></div>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#121212;display:flex;align-items:center;justify-content:center;gap:3cqw;color:#F5F2EA">
+      <svg viewBox="0 0 100 100" style="width:21cqw;height:21cqw;color:var(--sig,#D6FF3D)"><use href="#cs-mark"></use></svg>
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:18cqw;line-height:.8">cassaco</span><span style="font-family:'Anybody',sans-serif;font-weight:700;font-stretch:80%;font-size:3.4cqw;letter-spacing:.3em;text-transform:uppercase">produtora</span></div>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:var(--s1,#FF9FC4);display:flex;align-items:center;justify-content:center">
+      <div style="transform:rotate(3deg);background:#fff;padding:9px;border-radius:999px;box-shadow:0 8px 18px rgba(18,15,10,.25),0 1px 2px rgba(18,15,10,.2)">
+        <div style="background:#121212;color:#F5F2EA;border-radius:999px;padding:3.5cqw 7cqw 3.5cqw 4.5cqw;display:flex;align-items:center;gap:2.5cqw">
+          <svg viewBox="0 0 100 100" style="width:13cqw;height:13cqw;color:var(--sig,#D6FF3D)"><use href="#cs-mark"></use></svg>
+          <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:14cqw;line-height:.8">cassaco</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- path 3 -->
+  <div style="display:grid;grid-template-columns:220px repeat(3,minmax(0,1fr));gap:16px">
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:6px">
+      <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:56px;line-height:.8">3</span>
+      <span style="font-weight:700;font-size:18px">Selo carimbo</span>
+      <span style="font-size:14px;line-height:1.45;opacity:.75">Para embalagem, entregáveis, assinatura de projeto e merch. Texto em volta sempre em caixa alta.</span>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#FFFDF8;border:1.5px solid rgba(18,18,18,.15);display:flex;align-items:center;justify-content:center;color:#121212">
+      <svg viewBox="0 0 200 200" style="width:62%;max-width:200px;height:auto;overflow:visible"><circle cx="100" cy="100" r="96" style="fill:none;stroke:currentColor;stroke-width:4"></circle><circle cx="100" cy="100" r="60" style="fill:none;stroke:currentColor;stroke-width:2.5"></circle><text style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:70%;font-size:17px;letter-spacing:1px;fill:currentColor"><textPath href="#cs-seal-path" textLength="468">CASSACO PRODUTORA ✦ CEARÁ · LOS ANGELES ✦</textPath></text><use href="#cs-head" x="66" y="60" width="68" height="81"></use></svg>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#121212;display:flex;align-items:center;justify-content:center;color:#F5F2EA">
+      <svg viewBox="0 0 200 200" style="width:62%;max-width:200px;height:auto;overflow:visible"><circle cx="100" cy="100" r="96" style="fill:none;stroke:currentColor;stroke-width:4"></circle><circle cx="100" cy="100" r="60" style="fill:var(--sig,#D6FF3D);stroke:currentColor;stroke-width:2.5"></circle><text style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:70%;font-size:17px;letter-spacing:1px;fill:currentColor"><textPath href="#cs-seal-path" textLength="468">CASSACO PRODUTORA ✦ CEARÁ · LOS ANGELES ✦</textPath></text><use href="#cs-head" x="66" y="60" width="68" height="81" style="color:#121212"></use></svg>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:var(--sig,#D6FF3D);display:flex;align-items:center;justify-content:center;color:#121212">
+      <svg viewBox="0 0 200 200" style="width:66%;max-width:210px;height:auto;overflow:visible;transform:rotate(-6deg)"><g filter="url(#cs-diecut-sm)"><circle cx="100" cy="100" r="96" style="fill:var(--s1,#FF9FC4)"></circle><circle cx="100" cy="100" r="88" style="fill:none;stroke:currentColor;stroke-width:2;stroke-dasharray:2 5;stroke-linecap:round"></circle><circle cx="100" cy="100" r="60" style="fill:#FFFDF8;stroke:currentColor;stroke-width:2.5"></circle><text style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:70%;font-size:17px;letter-spacing:1px;fill:currentColor"><textPath href="#cs-seal-path" textLength="468">CASSACO PRODUTORA ✦ CEARÁ · LOS ANGELES ✦</textPath></text><use href="#cs-head" x="66" y="60" width="68" height="81"></use></g></svg>
+    </div>
+  </div>
+
+  <!-- path 4 -->
+  <div style="display:grid;grid-template-columns:220px repeat(3,minmax(0,1fr));gap:16px">
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:6px">
+      <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:56px;line-height:.8">4</span>
+      <span style="font-weight:700;font-size:18px">Monograma C</span>
+      <span style="font-size:14px;line-height:1.45;opacity:.75">Avatar e favicon. O C ganha orelhas, olho e focinho; legível até 16 px.</span>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#FFFDF8;border:1.5px solid rgba(18,18,18,.15);display:flex;align-items:center;justify-content:center;gap:28px;color:#121212">
+      <svg viewBox="0 0 100 100" style="width:32cqw;height:32cqw;fill:var(--s2,#3346FF)"><use href="#cs-mono"></use></svg>
+      <div style="display:flex;align-items:flex-end;gap:14px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><svg viewBox="0 0 100 100" style="width:32px;height:32px"><use href="#cs-mono"></use></svg><span style="font-family:'IBM Plex Mono',monospace;font-size:10px">32</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><svg viewBox="0 0 100 100" style="width:16px;height:16px"><use href="#cs-mono"></use></svg><span style="font-family:'IBM Plex Mono',monospace;font-size:10px">16</span></div>
+      </div>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:#121212;display:flex;align-items:center;justify-content:center;gap:20px">
+      <div style="width:32cqw;height:32cqw;border-radius:7.5cqw;background:var(--sig,#D6FF3D);display:flex;align-items:center;justify-content:center;color:#121212"><svg viewBox="0 0 100 100" style="width:23cqw;height:23cqw;fill:var(--s1,#FF9FC4)"><use href="#cs-mono"></use></svg></div>
+      <div style="width:25cqw;height:25cqw;border-radius:999px;background:#F5F2EA;display:flex;align-items:center;justify-content:center;color:#121212"><svg viewBox="0 0 100 100" style="width:17cqw;height:17cqw;fill:var(--s2,#3346FF)"><use href="#cs-mono"></use></svg></div>
+    </div>
+    <div style="aspect-ratio:4/3;container-type:inline-size;border-radius:16px;background:var(--s2,#3346FF);display:flex;align-items:center;justify-content:center;color:#121212">
+      <svg viewBox="0 0 100 100" style="width:42%;max-width:150px;height:auto;overflow:visible;transform:rotate(5deg)"><g filter="url(#cs-diecut-sm)"><circle cx="50" cy="56" r="44" style="fill:var(--sig,#D6FF3D)"></circle><use href="#cs-mono" x="10" y="10" width="80" height="80" style="fill:var(--s1,#FF9FC4)"></use></g></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PALETA -->
+<section id="paleta" data-screen-label="03 Paleta" style="padding-top:96px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">03 · Duas opções</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Paleta</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Mesma estrutura nas duas: off-white, preto tinta, uma cor de sinal e duas de apoio. Apoio 1 marca Conteúdo, Marca, Audiovisual e Sites. Apoio 2 marca Imersivo, 3D e Educação. Troque a paleta do sistema inteiro no painel Tweaks.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:24px">
+    <!-- A -->
+    <div style="border:2px solid #121212;border-radius:20px;overflow:hidden;background:#F5F2EA;color:#121212;display:flex;flex-direction:column">
+      <div style="padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Opção A</span>
+          <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:52px;line-height:.85;text-transform:uppercase">Noturno</span>
+          <span style="font-size:14px;line-height:1.45;max-width:340px">O bicho sai à noite. Sinal em lima elétrico, rosa do focinho e azul de tela.</span>
+        </div>
+        <svg viewBox="0 0 240 280" style="width:96px;height:auto;overflow:visible;color:#121212;transform:rotate(6deg);flex:none"><g filter="url(#cs-diecut)"><circle cx="120" cy="150" r="100" style="fill:#D6FF3D"></circle><use href="#cs-pose-vr" x="0" y="0" width="240" height="280" style="fill:#FF9FC4"></use></g></svg>
+      </div>
+      <div style="display:grid;grid-template-columns:1.1fr 1.1fr 1.3fr 1fr 1fr;min-height:200px;border-top:2px solid #121212">
+        <div style="background:#F5F2EA;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;border-right:1px solid rgba(18,18,18,.15)"><span style="font-weight:700;font-size:14px">Papel</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#F5F2EA</span><span style="font-size:11px;opacity:.7">Base</span></div>
+        <div style="background:#121212;color:#F5F2EA;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Tinta</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#121212</span><span style="font-size:11px;opacity:.7">Texto e traço</span></div>
+        <div style="background:#D6FF3D;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Lima Noturna</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#D6FF3D</span><span style="font-size:11px;opacity:.7">Sinal</span></div>
+        <div style="background:#FF9FC4;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Focinho</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#FF9FC4</span><span style="font-size:11px;opacity:.7">Apoio 1</span></div>
+        <div style="background:#3346FF;color:#fff;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Tela</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#3346FF</span><span style="font-size:11px;opacity:.8">Apoio 2</span></div>
+      </div>
+      <div style="padding:16px 24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:2px solid #121212">
+        <span style="background:#121212;color:#F5F2EA;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px">Bora conversar</span>
+        <span style="background:#D6FF3D;border:2px solid #121212;border-radius:999px;padding:8px 16px;font-weight:600;font-size:14px">Ver pacotes</span>
+        <span style="background:#FF9FC4;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600">Conteúdo</span>
+        <span style="background:#3346FF;color:#fff;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600">Imersivo</span>
+        <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px">Tinta/Papel 17.4:1 · Tinta/Lima 15.6:1</span>
+      </div>
+    </div>
+    <!-- B -->
+    <div style="border:2px solid #1D1813;border-radius:20px;overflow:hidden;background:#F4ECDF;color:#1D1813;display:flex;flex-direction:column">
+      <div style="padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Opção B</span>
+          <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:52px;line-height:.85;text-transform:uppercase">Sertão</span>
+          <span style="font-size:14px;line-height:1.45;max-width:340px">Urucum de sinal, mandacaru e céu seco. Nordeste pela cor, sem xilogravura nem chapéu de couro.</span>
+        </div>
+        <svg viewBox="0 0 240 280" style="width:96px;height:auto;overflow:visible;color:#1D1813;transform:rotate(-5deg);flex:none"><g filter="url(#cs-diecut)"><circle cx="120" cy="150" r="100" style="fill:#E5531F"></circle><use href="#cs-pose-camera" x="0" y="0" width="240" height="280" style="fill:#9CCBEF"></use></g></svg>
+      </div>
+      <div style="display:grid;grid-template-columns:1.1fr 1.1fr 1.3fr 1fr 1fr;min-height:200px;border-top:2px solid #1D1813">
+        <div style="background:#F4ECDF;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;border-right:1px solid rgba(29,24,19,.15)"><span style="font-weight:700;font-size:14px">Algodão</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#F4ECDF</span><span style="font-size:11px;opacity:.7">Base</span></div>
+        <div style="background:#1D1813;color:#F4ECDF;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Carvão</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#1D1813</span><span style="font-size:11px;opacity:.7">Texto e traço</span></div>
+        <div style="background:#E5531F;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Urucum</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#E5531F</span><span style="font-size:11px;opacity:.8">Sinal</span></div>
+        <div style="background:#3F7A55;color:#F4ECDF;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Mandacaru</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#3F7A55</span><span style="font-size:11px;opacity:.8">Apoio 1</span></div>
+        <div style="background:#9CCBEF;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px"><span style="font-weight:700;font-size:14px">Céu seco</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">#9CCBEF</span><span style="font-size:11px;opacity:.7">Apoio 2</span></div>
+      </div>
+      <div style="padding:16px 24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:2px solid #1D1813">
+        <span style="background:#1D1813;color:#F4ECDF;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px">Bora conversar</span>
+        <span style="background:#E5531F;border:2px solid #1D1813;border-radius:999px;padding:8px 16px;font-weight:600;font-size:14px">Ver pacotes</span>
+        <span style="background:#3F7A55;color:#F4ECDF;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600">Conteúdo</span>
+        <span style="background:#9CCBEF;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600">Imersivo</span>
+        <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px">Carvão/Algodão 15.9:1 · Carvão/Urucum 5.2:1</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Proporção</span><div style="display:flex;height:22px;border-radius:6px;overflow:hidden;border:1.5px solid var(--ink,#121212)"><div style="flex:60;background:var(--paper,#F5F2EA)"></div><div style="flex:25;background:var(--ink,#121212)"></div><div style="flex:8;background:var(--sig,#D6FF3D)"></div><div style="flex:4;background:var(--s1,#FF9FC4)"></div><div style="flex:3;background:var(--s2,#3346FF)"></div></div><span style="font-size:14px;line-height:1.45">60 papel · 25 tinta · 8 sinal · 7 apoio. O sinal aparece pouco para gritar quando aparece.</span></div>
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Texto sobre cor</span><span style="font-size:14px;line-height:1.45">Sinal sempre com texto em tinta, nunca em papel. Apoio escuro (Tela, Mandacaru) aceita texto claro.</span></div>
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Borda do sticker</span><span style="font-size:14px;line-height:1.45">Branco puro #FFFFFF, mais claro que o papel. É o que separa o adesivo do fundo.</span></div>
+  </div>
+</section>
+
+<!-- 04 TIPOGRAFIA -->
+<section id="tipo" data-screen-label="04 Tipografia" style="padding-top:96px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">04 · Google Fonts</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Tipografia</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Anybody faz o papel das display brasileiras de referência: grotesca condensada com personalidade. Instrument Sans segura o texto. Plex Mono entra em etiquetas, preços e dados técnicos.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:16px">
+    <div style="background:var(--ink,#121212);color:var(--paper,#F5F2EA);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px;min-height:340px">
+      <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase"><span>Display</span><span>Anybody · wdth 58 · 800/900</span></div>
+      <div style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:150px;line-height:.8;letter-spacing:-.01em">Aa Gg</div>
+      <div style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:40px;line-height:.95;text-transform:uppercase;margin-top:auto">Do feed à realidade virtual</div>
+      <div style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:58%;font-size:22px;letter-spacing:.04em">ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 ÁÉÇÃÕ</div>
+    </div>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase"><span>Texto</span><span>400 · 600 · 700</span></div>
+      <div style="font-family:'Instrument Sans',sans-serif;font-weight:500;font-size:96px;line-height:.9">Aa</div>
+      <div style="font-size:15px;line-height:1.5;margin-top:auto">Instrument Sans. Neutra, aberta e com bom desenho em tamanhos pequenos. Funciona igual em português e inglês, com acentos bem resolvidos.</div>
+    </div>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px;background:var(--sig,#D6FF3D);color:#121212">
+      <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase"><span>Etiqueta</span><span>400 · 500</span></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:84px;line-height:.9">Aa</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.6;margin-top:auto;text-transform:uppercase;letter-spacing:.06em">IBM Plex Mono<br>R$ 0.000 · US$ 0,000<br>360° · 4K · GLB · USDZ</div>
+    </div>
+  </div>
+
+  <div style="border:2px solid var(--ink,#121212);border-radius:20px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">display-xl</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">160 / 0.80 · 900</span><span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:clamp(72px,11vw,160px);line-height:.8;text-transform:uppercase">Imersivo</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">display-1</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">96 / 0.85 · 900</span><span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Marca do zero</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">display-2</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">64 / 0.90 · 900</span><span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:64px;line-height:.9;text-transform:uppercase">Tour 360° e AR no navegador</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">heading-1</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">44 / 1.00 · 800</span><span style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:62%;font-size:44px;line-height:1;text-transform:uppercase">A gente carrega seu projeto</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">heading-2</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">28 / 1.15 · 700</span><span style="font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:28px;line-height:1.15;letter-spacing:-.01em">Vídeo institucional que as pessoas assistem até o fim</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">heading-3</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">20 / 1.25 · 600</span><span style="font-family:'Instrument Sans',sans-serif;font-weight:600;font-size:20px;line-height:1.25">Captura em Gaussian Splat para museus e eventos</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">body-lg</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">18 / 1.50 · 400</span><span style="font-size:18px;line-height:1.5;max-width:640px">Time remoto entre Ceará e Los Angeles. Você fala com quem faz, em português ou inglês.</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">body</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">16 / 1.55 · 400</span><span style="font-size:16px;line-height:1.55;max-width:640px">Planejamento, roteiro, captação e edição. Entregamos pronto para postar, com legendas nas duas línguas.</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1.5px solid rgba(18,18,18,.15)"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">small</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">14 / 1.45 · 400</span><span style="font-size:14px;line-height:1.45">Preço de referência. O valor final sai depois da conversa de escopo.</span></div>
+    <div style="display:grid;grid-template-columns:160px 170px minmax(0,1fr);align-items:baseline;gap:16px;padding:18px 24px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">label</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.6">12 / 1.30 · 500 · +8%</span><span style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Imersivo · 3D · a partir de</span></div>
+  </div>
+</section>
+
+<!-- 05 TOKENS -->
+<section id="tokens" data-screen-label="05 Tokens" style="padding-top:96px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">05 · cassaco-tokens.css</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Tokens</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Grid limpo por baixo, adesivo por cima. Espaço em base 4, raios contidos na interface e generosos no sticker, sombra curta e sempre de cima.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Espaçamento · space-*</span>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-1</span><span style="opacity:.6">4</span><div style="height:12px;width:4px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-2</span><span style="opacity:.6">8</span><div style="height:12px;width:8px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-3</span><span style="opacity:.6">12</span><div style="height:12px;width:12px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-4</span><span style="opacity:.6">16</span><div style="height:12px;width:16px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-5</span><span style="opacity:.6">24</span><div style="height:12px;width:24px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-6</span><span style="opacity:.6">32</span><div style="height:12px;width:32px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-7</span><span style="opacity:.6">48</span><div style="height:12px;width:48px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-8</span><span style="opacity:.6">64</span><div style="height:12px;width:64px;background:var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-9</span><span style="opacity:.6">96</span><div style="height:12px;width:96px;background:var(--sig,#D6FF3D);border:1.5px solid var(--ink,#121212)"></div></div>
+      <div style="display:grid;grid-template-columns:70px 44px 1fr;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px"><span>space-10</span><span style="opacity:.6">128</span><div style="height:12px;width:128px;background:var(--sig,#D6FF3D);border:1.5px solid var(--ink,#121212)"></div></div>
+      <span style="font-size:13px;line-height:1.45;opacity:.75;margin-top:6px">Grid de 12 colunas, gutter 24, margem 40 no desktop e 20 no mobile. Seções separadas por space-9.</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Raios · radius-*</span>
+        <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px">
+          <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="aspect-ratio:1;background:var(--s1,#FF9FC4);border:2px solid var(--ink,#121212);border-radius:0"></div><span>none 0</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="aspect-ratio:1;background:var(--s1,#FF9FC4);border:2px solid var(--ink,#121212);border-radius:6px"></div><span>sm 6</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="aspect-ratio:1;background:var(--s1,#FF9FC4);border:2px solid var(--ink,#121212);border-radius:12px"></div><span>md 12</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="aspect-ratio:1;background:var(--s1,#FF9FC4);border:2px solid var(--ink,#121212);border-radius:20px"></div><span>lg 20</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="aspect-ratio:1;background:var(--sig,#D6FF3D);border:7px solid #fff;border-radius:28px;box-shadow:0 4px 10px rgba(18,15,10,.2)"></div><span>sticker 28</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="aspect-ratio:1;background:var(--s1,#FF9FC4);border:2px solid var(--ink,#121212);border-radius:999px"></div><span>pill 999</span></div>
+        </div>
+      </div>
+      <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px;background:#E9E4D8">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Sombras · shadow-*</span>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="height:70px;background:#fff;border-radius:12px;box-shadow:0 1px 2px rgba(18,15,10,.18),0 3px 6px rgba(18,15,10,.10)"></div><span>sticker-sm</span><span style="opacity:.6">0 1 2 /18 · 0 3 6 /10</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="height:70px;background:#fff;border-radius:12px;box-shadow:0 1px 2px rgba(18,15,10,.2),0 6px 14px rgba(18,15,10,.16)"></div><span>sticker-md</span><span style="opacity:.6">0 1 2 /20 · 0 6 14 /16</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="height:70px;background:#fff;border-radius:12px;box-shadow:0 2px 3px rgba(18,15,10,.16),0 16px 30px rgba(18,15,10,.2)"></div><span>sticker-lift</span><span style="opacity:.6">hover · 0 16 30 /20</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px">
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:18px;background:var(--s2,#3346FF);color:var(--s2-ink,#fff)">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Anatomia do sticker</span>
+      <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;padding:12px 8px">
+        <div style="transform:rotate(-4deg);background:#fff;padding:8px;border-radius:28px;box-shadow:0 1px 2px rgba(18,15,10,.2),0 6px 14px rgba(18,15,10,.16)"><div style="background:var(--sig,#D6FF3D);color:#121212;border-radius:20px;padding:20px 26px;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:44px;line-height:.9;text-transform:uppercase">Imersivo<br>de verdade</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.4">
+          <span>border-sticker · 8px #FFFFFF (6 pequeno, 10 grande)</span>
+          <span>radius-sticker · 28 externo, 20 interno</span>
+          <span>shadow · sticker-md</span>
+          <span>rotate · −6° a +6°, nunca 0 em grupo</span>
+          <span>die-cut SVG · dilate 10 · blur 4 · y 5</span>
+        </div>
+      </div>
+    </div>
+    <div style="border:2px solid var(--ink,#121212);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Rotação · rotate-*</span>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:end;padding:16px 0 4px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="width:100%;aspect-ratio:1;background:var(--s1,#FF9FC4);border:6px solid #fff;border-radius:14px;box-shadow:0 4px 10px rgba(18,15,10,.2);transform:rotate(-6deg)"></div><span>−6</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="width:100%;aspect-ratio:1;background:var(--s1,#FF9FC4);border:6px solid #fff;border-radius:14px;box-shadow:0 4px 10px rgba(18,15,10,.2);transform:rotate(-3deg)"></div><span>−3</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="width:100%;aspect-ratio:1;background:var(--paper,#F5F2EA);border:2px solid var(--ink,#121212);border-radius:14px"></div><span>0 · UI</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="width:100%;aspect-ratio:1;background:var(--s1,#FF9FC4);border:6px solid #fff;border-radius:14px;box-shadow:0 4px 10px rgba(18,15,10,.2);transform:rotate(3deg)"></div><span>+3</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px"><div style="width:100%;aspect-ratio:1;background:var(--s1,#FF9FC4);border:6px solid #fff;border-radius:14px;box-shadow:0 4px 10px rgba(18,15,10,.2);transform:rotate(6deg)"></div><span>+6</span></div>
+      </div>
+      <span style="font-size:13px;line-height:1.45;opacity:.75">Componentes de interface (campos, tabelas, grid) ficam retos. Só stickers, selos e mascote giram.</span>
+    </div>
+  </div>
+</section>
+
+<!-- 06 MASCOTE -->
+<section id="mascote" data-screen-label="06 Mascote" style="padding-top:96px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">06 · Sticker sheet</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Mascote</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Um bicho, dez poses. Ele se adapta a qualquer ambiente como a produtora se adapta a qualquer mídia. Traço único de 7 unidades, preenchimento papel, acessório na cor da família.</p>
+  </div>
+
+  <div style="background:#E9E4D8;border-radius:24px;padding:40px 32px 28px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 20px;background-image:radial-gradient(rgba(18,18,18,.08) 1px,transparent 1px);background-size:16px 16px">
+    <sc-for list="{{ poses }}" as="p" hint-placeholder-count="10">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+        <svg viewBox="0 0 240 280" style="width:100%;height:auto;overflow:visible;color:#121212;transform:rotate({{ p.rot }})"><g filter="url(#cs-diecut)"><circle cx="120" cy="150" r="100" style="fill:{{ p.bg }}"></circle><use href="#{{ p.id }}" x="0" y="0" width="240" height="280" style="fill:{{ p.acc }}"></use></g></svg>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center">
+          <span style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:60%;font-size:22px;line-height:1;text-transform:uppercase">{{ p.pt }}</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em">{{ p.en }} · {{ p.prop }}</span>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Uma cor</span><span style="font-size:14px;line-height:1.45">Traço e manchas em tinta, rosto em papel. Funciona em carimbo, bordado e serigrafia de uma cor.</span></div>
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Pose = família</span><span style="font-size:14px;line-height:1.45">Cada serviço tem uma pose fixa. Não misturar acessórios de famílias diferentes.</span></div>
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Humor</span><span style="font-size:14px;line-height:1.45">Pendurado e fingindo de morto são para erro, espera, 404 e posts leves. Nunca em proposta.</span></div>
+    <div style="border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Não fazer</span><span style="font-size:14px;line-height:1.45">Sem degradê, sem 3D realista, sem roupa, sem fala em balão. Ele age, não discursa.</span></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Selos</span>
+    <div style="background:var(--ink,#121212);border-radius:24px;padding:48px 32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;align-items:center;justify-items:center">
+      <svg viewBox="0 0 200 200" style="width:100%;max-width:240px;height:auto;overflow:visible;color:#121212;transform:rotate(-5deg)"><g filter="url(#cs-diecut-sm)"><circle cx="100" cy="100" r="96" style="fill:var(--sig,#D6FF3D)"></circle><circle cx="100" cy="100" r="60" style="fill:none;stroke:currentColor;stroke-width:2.5"></circle><text style="font-family:'Anybody',sans-serif;font-weight:800;font-stretch:70%;font-size:17px;letter-spacing:1px;fill:currentColor"><textPath href="#cs-seal-path" textLength="468">DO CEARÁ PRA LA ✦ FROM CEARÁ TO LA ✦</textPath></text><text x="100" y="94" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:34px;text-anchor:middle;fill:currentColor">CE</text><text x="100" y="128" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:34px;text-anchor:middle;fill:currentColor">LA</text><path d="M84 102 H116 M110 97 L116 102 L110 107" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+      <svg viewBox="0 0 200 200" style="width:100%;max-width:250px;height:auto;overflow:visible;color:#fff;transform:rotate(6deg)"><g filter="url(#cs-diecut-sm)"><use href="#cs-burst" x="0" y="0" width="200" height="200" style="fill:var(--s2,#3346FF)"></use><text x="100" y="86" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:40px;text-anchor:middle;fill:currentColor">IMERSIVO</text><text x="100" y="122" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:40px;text-anchor:middle;fill:currentColor">DE VERDADE</text><text x="100" y="146" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;text-anchor:middle;fill:currentColor">VR · AR · 360° · SPLAT</text></g></svg>
+      <svg viewBox="0 0 240 120" style="width:100%;max-width:280px;height:auto;overflow:visible;color:#121212;transform:rotate(-3deg)"><g filter="url(#cs-diecut-sm)"><rect x="4" y="10" width="232" height="100" rx="50" style="fill:var(--s1,#FF9FC4)"></rect><rect x="14" y="20" width="212" height="80" rx="40" style="fill:none;stroke:currentColor;stroke-width:2;stroke-dasharray:6 5"></rect><text x="120" y="66" style="font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:40px;text-anchor:middle;fill:currentColor">BILÍNGUE</text><text x="120" y="88" style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:3px;text-anchor:middle;fill:currentColor">PT / EN</text></g></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 07 ICONES -->
+<section id="icones" data-screen-label="07 Icones" style="padding-top:96px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:70px">
+  <div style="border-top:2px solid var(--ink,#121212);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">07 · Grid 24 · traço 2</span>
+      <h2 style="margin:0;font-family:'Anybody',sans-serif;font-weight:900;font-stretch:58%;font-size:96px;line-height:.85;text-transform:uppercase">Ícones</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.5;max-width:520px;text-wrap:pretty">Sete famílias de serviço, mesmo objeto da pose do mascote. Traço 2 com pontas redondas, sem preenchimento. Em tamanho de UI ficam em tinta; em card ganham a cor do pilar.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px">
+    <sc-for list="{{ families }}" as="f" hint-placeholder-count="7">
+      <div style="border:2px solid var(--ink,#121212);border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:1;background:{{ f.bg }};color:{{ f.fg }};display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:46%;height:46%"><use href="#{{ f.icon }}"></use></svg></div>
+        <div style="padding:12px;border-top:2px solid var(--ink,#121212);display:flex;flex-direction:column;gap:2px">
+          <span style="font-weight:700;font-size:15px">{{ f.pt }}</span>
+          <span style="font-size:12px;opacity:.7">{{ f.en }}</span>
+          <div style="display:flex;gap:8px;margin-top:8px;align-items:center"><svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#{{ f.icon }}"></use></svg><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#{{ f.icon }}"></use></svg></div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;border:1.5px solid rgba(18,18,18,.2);border-radius:16px;padding:16px 20px">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">Utilitários</span>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-arrow"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-arrow-ur"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-check"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-plus"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-globe"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-mail"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-pin"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-insta"></use></svg>
+    <svg viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#ic-phone"></use></svg>
+  </div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;palette&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Noturno&quot;,&quot;Sertão&quot;],&quot;default&quot;:&quot;Noturno&quot;,&quot;tsType&quot;:&quot;'Noturno' | 'Sertão'&quot;,&quot;section&quot;:&quot;Marca&quot;},&quot;tilt&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.25,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Marca&quot;}}">
+class Component extends DCLogic {
+  applyTheme() {
+    const P = {
+      'Noturno': { '--paper': '#F5F2EA', '--ink': '#121212', '--sig': '#D6FF3D', '--s1': '#FF9FC4', '--s2': '#3346FF', '--s1-ink': '#121212', '--s2-ink': '#FFFFFF' },
+      'Sertão': { '--paper': '#F4ECDF', '--ink': '#1D1813', '--sig': '#E5531F', '--s1': '#3F7A55', '--s2': '#9CCBEF', '--s1-ink': '#F4ECDF', '--s2-ink': '#1D1813' }
+    };
+    const p = P[this.props.palette] || P['Noturno'];
+    const st = document.documentElement.style;
+    Object.keys(p).forEach(k => st.setProperty(k, p[k]));
+  }
+  componentDidMount() { this.applyTheme(); }
+  componentDidUpdate() { this.applyTheme(); }
+  renderVals() {
+    const tilt = this.props.tilt ?? 1;
+    const rot = d => (d * tilt).toFixed(1) + 'deg';
+    const S1 = 'var(--s1,#FF9FC4)', S2 = 'var(--s2,#3346FF)', SIG = 'var(--sig,#D6FF3D)', PAPER = 'var(--paper,#F5F2EA)';
+    return {
+      names: [
+        { num: 1, name: 'cassaco', suffix: 'produtora', phon: 'kuh·SAH·koh', idea: 'O nome puro. Nos EUA vem com a linha "named after the Brazilian opossum".', us: 'Exótico e simpático. Na primeira leitura parece "cassock" ou "Costco"; a história do bicho resolve na segunda.', prosPT: ['Único e com boa chance de registro', 'Origem e mascote contam a história sozinhos'], consPT: ['Confunde com "casaco" na escrita e na busca', 'Sozinho não diz o que a empresa faz'], prosEN: ['Distinctive, ownable, great origin story', 'Short and easy to say once heard'], consEN: ['Spelling is not obvious (double s)', 'Needs a descriptor to explain the business'] },
+        { num: 2, name: 'cassaco', suffix: 'studio', phon: 'kuh·SAH·koh STOO·dee·oh', idea: 'Nome + descritor universal de agência criativa.', us: 'Profissional e familiar. "Studio" é o código de agência criativa nos EUA; passa confiança para B2B.', prosPT: ['Deixa claro que é criativo', 'Funciona igual em PT e EN'], consPT: ['Sufixo comum, muita gente usa', 'Fica longo em avatar e @'], prosEN: ['Instantly reads as a creative agency', 'Easier to trust for B2B clients'], consEN: ['Generic suffix in a crowded space', 'Longer handle and domain'] },
+        { num: 3, name: 'cassaco', suffix: 'lab', phon: 'kuh·SAH·koh LAB', idea: 'Ênfase em imersivo, 3D e experimentação.', us: 'Tech e experimental. Puxa para VR, AR e 3D; soa menos como social media e branding.', prosPT: ['Reforça o diferencial imersivo', 'Curto e moderno'], consPT: ['Pode afastar quem busca conteúdo e marca', '"Lab" já é muito usado em tech'], prosEN: ['Signals R&D and immersive tech', 'Short, modern, memorable'], consEN: ['Narrows perception to tech work', 'Can sound like a dev or science shop'] },
+        { num: 4, name: 'timbu', suffix: 'studio', phon: 'TEEM·boo', idea: 'Outro nome nordestino do mesmo bicho, comum em Pernambuco.', us: 'Curto, leve, fácil de falar. Lembra "Timbuktu", o que deixa o nome divertido.', prosPT: ['Mantém o bicho e a raiz nordestina', '5 letras, ótimo para avatar e domínio'], consPT: ['Associado ao Náutico, de Recife', 'Perde o que já foi construído como Cassaco'], prosEN: ['Two syllables, zero spelling doubt', 'Playful sound for a young studio'], consEN: ['No built-in meaning for US audiences', 'Short .com likely taken'] },
+        { num: 5, name: 'marsu', suffix: 'studio', phon: 'MAR·soo', idea: 'De marsupial: quem carrega os filhotes. "A gente carrega seu projeto" em uma palavra.', us: 'Global e direto. Lembra "Mars" e "marsupial"; ninguém erra a escrita.', prosPT: ['Conta a ideia de carregar o projeto', 'Igual em PT e EN'], consPT: ['Próximo de Marsupilami, exige busca de marca', 'Perde a raiz nordestina'], prosEN: ['Says "we carry your project" in one word', 'Easy to spell and pronounce'], consEN: ['Possible trademark overlap', 'Less personality than Cassaco'] }
+      ],
+      poses: [
+        { id: 'cs-pose-phone', pt: 'Conteúdo', en: 'Content', prop: 'celular', bg: S1, acc: SIG, rot: rot(-4) },
+        { id: 'cs-pose-brush', pt: 'Marca', en: 'Branding', prop: 'pincel', bg: S1, acc: SIG, rot: rot(3) },
+        { id: 'cs-pose-camera', pt: 'Audiovisual', en: 'Video & photo', prop: 'câmera', bg: S1, acc: SIG, rot: rot(-2) },
+        { id: 'cs-pose-laptop', pt: 'Sites', en: 'Websites', prop: 'notebook', bg: S1, acc: SIG, rot: rot(5) },
+        { id: 'cs-pose-vr', pt: 'Imersivo', en: 'Immersive', prop: 'óculos VR', bg: S2, acc: SIG, rot: rot(-5) },
+        { id: 'cs-pose-cube', pt: '3D', en: '3D modeling', prop: 'cubo wireframe', bg: S2, acc: SIG, rot: rot(2) },
+        { id: 'cs-pose-trophy', pt: 'Educação', en: 'Gamified learning', prop: 'troféu', bg: S2, acc: SIG, rot: rot(-3) },
+        { id: 'cs-pose-hang', pt: 'Pendurado', en: 'Hang in there', prop: 'espera', bg: SIG, acc: S1, rot: rot(4) },
+        { id: 'cs-pose-dead', pt: 'Fingindo de morto', en: '404 · Error', prop: 'humor', bg: SIG, acc: S1, rot: rot(-6) },
+        { id: 'cs-pose-babies', pt: 'A gente carrega', en: 'We carry it', prop: 'filhotes', bg: SIG, acc: S1, rot: rot(3) }
+      ],
+      families: [
+        { icon: 'ic-conteudo', pt: 'Conteúdo', en: 'Content & social', bg: S1, fg: 'var(--s1-ink,#121212)' },
+        { icon: 'ic-marca', pt: 'Marca', en: 'Branding', bg: S1, fg: 'var(--s1-ink,#121212)' },
+        { icon: 'ic-audiovisual', pt: 'Audiovisual', en: 'Video & photo', bg: S1, fg: 'var(--s1-ink,#121212)' },
+        { icon: 'ic-sites', pt: 'Sites', en: 'Websites', bg: S1, fg: 'var(--s1-ink,#121212)' },
+        { icon: 'ic-imersivo', pt: 'Imersivo', en: 'VR · AR · 360°', bg: S2, fg: 'var(--s2-ink,#fff)' },
+        { icon: 'ic-3d', pt: '3D', en: '3D modeling', bg: S2, fg: 'var(--s2-ink,#fff)' },
+        { icon: 'ic-edu', pt: 'Educação', en: 'Gamified learning', bg: S2, fg: 'var(--s2-ink,#fff)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

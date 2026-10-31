@@ -1,0 +1,68 @@
+/* Cassaco Produtora · tokens v0.1 */
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Instrument+Sans:wdth,wght@75..100,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Paleta A · Noturno (padrão) */
+  --paper: #F5F2EA;
+  --ink: #121212;
+  --sig: #D6FF3D;      /* Lima Noturna · sinal */
+  --s1: #FF9FC4;       /* Focinho · Comunicação */
+  --s2: #3346FF;       /* Tela · Imersivo e 3D */
+  --s1-ink: #121212;
+  --s2-ink: #FFFFFF;
+  --sticker-edge: #FFFFFF;
+  --surface-card: #FFFDF8;
+  --desk: #E9E4D8;
+
+  /* Tipografia */
+  --font-display: 'Anybody', sans-serif;      /* wdth 58, 800/900, caixa alta */
+  --font-text: 'Instrument Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --display-stretch: 58%;
+  --fs-display-xl: 160px; --lh-display-xl: .80;
+  --fs-display-1: 96px;   --lh-display-1: .85;
+  --fs-display-2: 64px;   --lh-display-2: .90;
+  --fs-h1: 44px;          --lh-h1: 1;
+  --fs-h2: 28px;          --lh-h2: 1.15;
+  --fs-h3: 20px;          --lh-h3: 1.25;
+  --fs-body-lg: 18px;     --lh-body-lg: 1.5;
+  --fs-body: 16px;        --lh-body: 1.55;
+  --fs-small: 14px;       --lh-small: 1.45;
+  --fs-label: 12px;       --ls-label: .08em;
+
+  /* Espaçamento (base 4) */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px; --space-10: 128px;
+
+  /* Raios */
+  --radius-none: 0; --radius-sm: 6px; --radius-md: 12px; --radius-lg: 20px;
+  --radius-sticker: 28px; --radius-pill: 999px;
+
+  /* Bordas */
+  --border-ui: 2px solid var(--ink);
+  --border-sticker-sm: 6px; --border-sticker: 8px; --border-sticker-lg: 10px;
+
+  /* Sombras */
+  --shadow-sticker-sm: 0 1px 2px rgba(18,15,10,.18), 0 3px 6px rgba(18,15,10,.10);
+  --shadow-sticker-md: 0 1px 2px rgba(18,15,10,.20), 0 6px 14px rgba(18,15,10,.16);
+  --shadow-sticker-lift: 0 2px 3px rgba(18,15,10,.16), 0 16px 30px rgba(18,15,10,.20);
+  --shadow-hard: 4px 4px 0 var(--ink);
+
+  /* Rotação (só stickers, selos e mascote) */
+  --rotate-1: 2deg; --rotate-2: 3deg; --rotate-3: 4deg; --rotate-4: 6deg;
+
+  /* Movimento */
+  --ease-spring: cubic-bezier(.3,1.6,.5,1);
+  --dur-fast: .15s; --dur-base: .2s;
+}
+
+/* Paleta B · Sertão */
+[data-palette="sertao"] {
+  --paper: #F4ECDF;
+  --ink: #1D1813;
+  --sig: #E5531F;      /* Urucum */
+  --s1: #3F7A55;       /* Mandacaru */
+  --s2: #9CCBEF;       /* Céu seco */
+  --s1-ink: #F4ECDF;
+  --s2-ink: #1D1813;
+}
